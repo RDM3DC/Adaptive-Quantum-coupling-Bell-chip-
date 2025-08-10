@@ -1,90 +1,163 @@
-\documentclass[12pt]{article}
-\usepackage{amsmath, amssymb, amsfonts, physics, bm}
+Here’s the same content reformatted for a GitHub README.md, with all equations in Markdown/LaTeX syntax so GitHub renders them properly.
+I’ve kept the structure, headings, and equations, but adapted it to a README style instead of a journal paper.
 
-\title{Adaptive--Quantum Coupling via the Adaptive Resistance Principle: \\
-A Bell--Chip Platform for Controllable Coherence and Wavefunction Steering}
-\author{Ryan McKenna \& Collaborators}
-\date{\today}
+⸻
 
-\begin{document}
-\maketitle
+Adaptive–Quantum Coupling via ARP — “Bell-chip” Platform
 
-\begin{abstract}
-We present a coupled dynamical framework linking quantum state evolution to an adaptive memory field obeying the Adaptive Resistance Principle (ARP).
-The resulting \emph{Adaptive--Quantum} system allows real-time control of coherence, tunable wavefunction collapse, and history-dependent phase shifts.
-We derive the general equations, analyze two-level (qubit) reductions, give closed-form limits, and propose falsifiable laboratory tests.
-\end{abstract}
+Authors: Ryan McKenna & Collaborators
+Date: 2025-08-10
 
-\section{Core Model}
+⸻
+
+Overview
+
+We present a coupled dynamical framework linking quantum state evolution to an Adaptive Resistance Principle (ARP) memory field.
+This Adaptive–Quantum system enables:
+	•	Tunable coherence
+	•	Wavefunction steering
+	•	History-dependent phase shifts
+	•	Controllable decoherence
+
+We derive the general equations, analyze the two-level (qubit) case, give closed-form limits, and propose falsifiable lab tests.
+
+⸻
+
+1. Core Model
 
 Let $\ket{\psi(t)}$ be the system state and $H(t)$ the bare Hamiltonian.
 An ARP memory field $G(t)$ evolves in parallel, storing information about the state.
 
-\subsection{Coupled equations}
-\begin{align}
+Coupled equations:
+
 i\hbar\,\frac{d}{dt} \ket{\psi}
-&= \big( H + \lambda\,\mathcal{A}[\psi,G] \big) \ket{\psi}, \label{schrodinger}\\
-\dot{G} &= \alpha\,\mathcal{I}[\psi] - \mu\,G, \label{memory}
-\end{align}
-where:
-\begin{itemize}
-\item $\lambda$ is the state--memory coupling strength,
-\item $\alpha$ is the reinforcement (write-in) rate,
-\item $\mu$ is the decay (forgetting) rate,
-\item $\mathcal{I}[\psi]$ is the \emph{imprint functional} determining what the state writes into memory,
-\item $\mathcal{A}[\psi,G]$ is a Hermitian \emph{back-action operator} acting on $\psi$.
-\end{itemize}
+= \big( H + \lambda\,\mathcal{A}[\psi,G] \big) \ket{\psi}
 
-A natural choice is the state-space gradient coupling:
-\begin{equation}
-\mathcal{A}[\psi,G] = \nabla_{\text{state}}\, G(\psi).
-\end{equation}
+\dot{G} = \alpha\,\mathcal{I}[\psi] - \mu\,G
 
-\section{Experiment-Friendly Forms}
+Where:
+	•	$\lambda$ = state–memory coupling strength
+	•	$\alpha$ = reinforcement (write-in) rate
+	•	$\mu$ = decay (forgetting) rate
+	•	$\mathcal{I}[\psi]$ = imprint functional (state → memory)
+	•	$\mathcal{A}[\psi,G]$ = Hermitian back-action (memory → state)
 
-\subsection{Population-weighted memory}
-For basis $\{\ket{j}\}$ with projectors $P_j=\ket{j}\bra{j}$:
-\begin{align}
-\mathcal{I}[\psi] &= \sum_j w_j \,\langle \psi | P_j | \psi \rangle \, P_j,\\
-G(t) &= \sum_j g_j(t) P_j, \quad
-\dot{g}_j = \alpha w_j p_j - \mu g_j.
-\end{align}
-Here $\mathcal{A}$ is diagonal, producing detuning control.
+A natural choice:
 
-\subsection{Coherence-sensitive memory}
-Let $\rho=\ket{\psi}\bra{\psi}$. For a two-level system with Pauli matrices $\sigma_x,\sigma_y$:
-\begin{align}
-\dot{g}_x &= \frac{\alpha}{2} x - \mu g_x, \quad
-\dot{g}_y = \frac{\alpha}{2} y - \mu g_y, \\
-\mathcal{A} &= g_x \sigma_x + g_y \sigma_y,
-\end{align}
-where $(x,y,z)$ are Bloch components of $\rho$.
+\mathcal{A}[\psi,G] = \nabla_{\text{state}}\, G(\psi)
 
-\section{Two-Level (Qubit) Reduction}
 
-For bare Hamiltonian
-\begin{equation}
-H = \frac{\hbar}{2} \big( \Delta\,\sigma_z + \Omega\,\sigma_x \big),
-\end{equation}
-the coupled Bloch--ARP system is:
-\begin{align}
-\dot{x} &= -\Delta y - 2\lambda g_y z, \\
-\dot{y} &= \Delta x - \Omega z + 2\lambda g_x z, \\
-\dot{z} &= \Omega y + 2\lambda(g_y x - g_x y), \\
-\dot{g}_x &= \frac{\alpha}{2}x - \mu g_x, \\
-\dot{g}_y &= \frac{\alpha}{2}y - \mu g_y.
-\end{align}
+⸻
 
-\section{Closed-Form Limits}
+2. Experiment-Friendly Forms
 
-\subsection{Fast memory limit ($\mu \gg \alpha,\Omega,|\Delta|$)}
-Memory adiabatically follows the state:
-\begin{equation}
-g_x \approx \frac{\alpha}{2\mu} x, \quad
-g_y \approx \frac{\alpha}{2\mu} y.
-\end{equation}
-This yields a nonlinear detuning $\propto z$.
+A) Population-weighted memory
 
+\mathcal{I}[\psi] = \sum_j w_j \,\langle \psi | P_j | \psi \rangle \, P_j
+
+\dot{g}_j = \alpha w_j p_j - \mu g_j
+
+Here $\mathcal{A}$ is diagonal (detuning control).
+
+B) Coherence-sensitive memory
+
+For $\rho = \ket{\psi}\bra{\psi}$:
+
+\dot{g}_x = \frac{\alpha}{2} x - \mu g_x
+
+\dot{g}_y = \frac{\alpha}{2} y - \mu g_y
+
+\mathcal{A} = g_x \sigma_x + g_y \sigma_y
+
+
+⸻
+
+3. Two-Level (Qubit) Reduction
+
+Bare Hamiltonian:
+
+H = \frac{\hbar}{2} \big( \Delta\,\sigma_z + \Omega\,\sigma_x \big)
+
+Coupled Bloch–ARP system:
+
+\dot{x} = -\Delta y - 2\lambda g_y z
+
+\dot{y} = \Delta x - \Omega z + 2\lambda g_x z
+
+\dot{z} = \Omega y + 2\lambda(g_y x - g_x y)
+
+\dot{g}_x = \frac{\alpha}{2}x - \mu g_x
+
+\dot{g}_y = \frac{\alpha}{2}y - \mu g_y
+
+
+⸻
+
+4. Closed-Form Limits
+
+Fast memory ($\mu \gg \alpha,\Omega,|\Delta|$)
+
+g_x \approx \frac{\alpha}{2\mu} x, \quad g_y \approx \frac{\alpha}{2\mu} y
+
+→ Nonlinear detuning $\propto z$.
+
+Slow memory ($\mu \ll \Omega,|\Delta|$)
+	•	Memory integrates state history
+	•	Produces hysteresis in phase shifts
+
+⸻
+
+5. Open-System Extension
+
+With Lindblad dissipation:
+
+\dot{\rho} = -\frac{i}{\hbar}[H+\lambda\mathcal{A},\rho]
++ \Gamma_1 \mathcal{D}[\sigma_-]\rho
++ \left( \Gamma_\phi + \eta g_y^2 \right) \mathcal{D}[\sigma_z]\rho
+
+Where $\mathcal{D}[L]\rho = L\rho L^\dagger - \frac{1}{2}{L^\dagger L, \rho}$.
+
+⸻
+
+6. Falsifiable Predictions
+	1.	Hysteretic Rabi tip:
+Sweeping $\Delta$ up/down under CW drive yields different steady-state branches for $z^\star(\Delta)$ when $\Lambda=\lambda\alpha/\mu>0$.
+	2.	Controllable decoherence floor:
+
+T_2^{-1}=\Gamma_2+\eta g_y^2
+
+Produces amplitude-dependent dephasing.
+
+	3.	Line-shape skew:
+Linear response acquires:
+
+\Lambda\frac{\Delta}{\Gamma_2-i\omega}
+
+→ Odd-in-$\Delta$ asymmetry.
+
+⸻
+
+7. Why This Matters
+
+This framework generalizes Schrödinger dynamics with an ARP-based memory field, enabling:
+	•	Tunable coherence
+	•	Wavefunction steering
+	•	Non-Markovian control
+	•	Multi-domain applications: quantum computing, communication, materials, fundamental physics
+
+⸻
+
+8. Next Steps
+	•	Implement Python simulation of Bloch–ARP system
+	•	Generate figures for Predictions 1–3
+	•	Prototype chip-level hardware for “Bell-chip” test
+	•	Publish on arXiv
+
+⸻
+
+If you want, I can add a runnable Python example right after this section so that someone cloning the repo can immediately simulate Predictions 1–3. That would make this README “interactive” and testable.
+
+Do you want me to add that next?
 \subsection{Slow memory limit ($\mu \ll \Omega,|\Delta|$)}
 Memory integrates the state history, producing hysteresis in phase shifts.
 
