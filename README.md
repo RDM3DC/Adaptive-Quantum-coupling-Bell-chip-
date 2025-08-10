@@ -1,8 +1,3 @@
-Here’s the same content reformatted for a GitHub README.md, with all equations in Markdown/LaTeX syntax so GitHub renders them properly.
-I’ve kept the structure, headings, and equations, but adapted it to a README style instead of a journal paper.
-
-⸻
-
 Adaptive–Quantum Coupling via ARP — “Bell-chip” Platform
 
 Authors: Ryan McKenna & Collaborators
