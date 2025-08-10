@@ -1,0 +1,13 @@
+{
+  "Omega_ref_GHz": 0.1,
+  "Delta_eff": 0.0,
+  "Lambda": 1.5,
+  "alpha": 0.6,
+  "mu": 0.06,
+  "lambda_local": 0.15,
+  "J_over_Omega": 0.22,
+  "lambda_c": 0.72,
+  "alphac": 0.48,
+  "muc": 0.06,
+  "notes": "Collaborator-reported sweet spot; time-to-0.9 ~14.2 (Omega=1 units) ~142 ns at 0.1 GHz drive."
+}
