@@ -166,11 +166,16 @@ This framework generalizes Schrödinger dynamics with an ARP-based memory field,
 	•	Multi-domain applications: quantum computing, communication, materials, fundamental physics
 
 ⸻
+# create a venv (optional)
+python -m venv .venv && source .venv/bin/activate
+pip install numpy matplotlib
 
-8. Next Steps
-	•	Implement Python simulation of Bloch–ARP system
-	•	Generate figures for Predictions 1–3
-	•	Prototype chip-level hardware for “Bell-chip” test
-	•	Publish on arXiv
+# run all predictions and save figures to ./outputs
+python bell_chip_predictions.py --which ALL --out ./outputs
+
+# run a single prediction
+python bell_chip_predictions.py --which P1
+python bell_chip_predictions.py --which P2 --Gamma2 0.03 --eta 0.8
+python bell_chip_predictions.py --which P3 --light
 
 ⸻
