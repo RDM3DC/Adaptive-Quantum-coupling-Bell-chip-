@@ -24,12 +24,12 @@ Let $\ket{\psi(t)}$ be the system state and $H(t)$ the bare Hamiltonian.
 An ARP memory field $G(t)$ evolves in parallel, storing information about the state.
 
 Coupled equations:
-$$
+
 i\hbar\,\frac{d}{dt} \ket{\psi}
 = \big( H + \lambda\,\mathcal{A}[\psi,G] \big) \ket{\psi}
 
 \dot{G} = \alpha\,\mathcal{I}[\psi] - \mu\,G
-$$
+
 Where:
 	•	$\lambda$ = state–memory coupling strength
 	•	$\alpha$ = reinforcement (write-in) rate
