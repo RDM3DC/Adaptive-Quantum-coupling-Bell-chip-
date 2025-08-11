@@ -23,7 +23,7 @@ See [`CITATION.cff`](CITATION.cff).
 
 Adaptive–Quantum Coupling via ARP — “Bell-chip” Platform
 
-Authors: Ryan McKenna & Collaborators
+Authors: Ryan McKenna & Grok and GPT-5
 Date: 2025-08-10
 
 ⸻
