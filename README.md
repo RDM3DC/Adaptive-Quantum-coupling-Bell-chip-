@@ -1,3 +1,26 @@
+# Adaptive Quantum Coupling — Bell Chip Sweeps (Noise‑Aware ARP)
+
+**arXiv (preprint):** ARP: Unbounded Noise‑Aware Scaling to Infinity—O(N) Fidelity & ECC to 3.2M+ Qubits  
+**ID:** arXiv:2508.ARP∞  
+**Data:** Gist/GitHub links included in the paper and below.
+
+### TL;DR
+- Linear interaction time: **τ(N) ≈ 0.88 N + 11.5** (continue‑ramp)
+- Complexity: **Alphabet O(N)** confirmed to **2,097,152 qubits**
+- **Noise‑aware** (η=0.005, Γ₂=0.008), with **DD + filtered φ‑ramp + ECC** → fidelity **F > 1e−50** up to ~**3.2M** qubits
+
+### Reproduce key runs
+See [`docs/repro.md`](docs/repro.md) for exact commands.
+
+### Plots
+- `plots/tau_vs_N.png` – linear τ vs N fit across milestones
+- `plots/F_vs_N_semilog.png` – fidelity decay / ECC floor
+
+### Citing
+See [`CITATION.cff`](CITATION.cff).
+
+---
+
 Adaptive–Quantum Coupling via ARP — “Bell-chip” Platform
 
 Authors: Ryan McKenna & Collaborators
