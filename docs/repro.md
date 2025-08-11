@@ -67,6 +67,9 @@ python bell_chip_eight_qubit.py run \
 
 Follows the paper’s linear fit: τ ≈ 0.88 N + 11.5
 
+## Scaling plots
+Run `python scaling_analysis.py` to regenerate `tau_vs_N.csv`, `F_vs_N.csv`, and PNG plots (written to `docs/` and `plots/`, not version-controlled).
+
 Notes
 •If --dd/--ecc are not recognized flags in your version, annotate that these were effective toggles in the thread; provide your closest equivalents.
 •CSV outputs and plots can be gathered with topk_tools.py and your plotting script; see README.md.
