@@ -1,6 +1,7 @@
 cff-version: 1.2.0
 title: "Adaptive Resistance Principle: Noise‑Aware Linear Scaling to Multi‑Million Qubits"
 authors:
+  - given-names: Grok  
   - family-names: McKenna
     given-names: Ryan
   - name: Collaborators on ARP Bell‑Chip Project
