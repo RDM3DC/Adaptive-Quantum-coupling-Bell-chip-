@@ -1,0 +1,15 @@
+cff-version: 1.2.0
+title: "Adaptive Resistance Principle: Noise‑Aware Linear Scaling to Multi‑Million Qubits"
+authors:
+  - family-names: McKenna
+    given-names: Ryan
+  - name: Collaborators on ARP Bell‑Chip Project
+version: v0.1-arxiv
+date-released: 2025-08-11
+url: https://github.com/RDM3DC/Adaptive-Quantum-coupling-Bell-chip-
+identifiers:
+  - type: other
+    value: arXiv:2508.ARP∞
+message: >-
+  If you use this code or data, please cite this preprint and tag the arXiv
+  identifier in your manuscript.

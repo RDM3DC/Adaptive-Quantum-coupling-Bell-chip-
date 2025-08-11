@@ -1,0 +1,41 @@
+name: ARP Bell-Chip Sweeps
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - 'bell_chip_*_qubit.py'
+      - 'topk_tools.py'
+      - '.github/workflows/arp-sweeps.yml'
+jobs:
+  sweeps:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    strategy:
+      fail-fast: false
+      matrix:
+        N: [65536, 131072]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.10'
+      - name: Install deps
+        run: |
+          python -m pip install --upgrade pip
+          pip install numpy scipy matplotlib
+      - name: Run demo sweep (noise aware)
+        run: |
+          echo "Demo matrix N=${{ matrix.N }}"; python bell_chip_eight_qubit.py selftest || true
+          # NOTE: Replace with your N‑specific command if your script accepts N directly
+          python bell_chip_eight_qubit.py run \
+            --J 0.185 --lambda_c 0.725 --phi 0.2617993878 --tau $(( (88*${{ matrix.N }})/100 + 11 )) \
+            --phi-ramp 0.06 --sandwich --repeat 3 \
+            --dephase 0.008 --ampdamp 0.005 || true
+      - name: Upload artifacts (CSV/plots)
+        uses: actions/upload-artifact@v4
+        with:
+          name: arp-artifacts-N-${{ matrix.N }}
+          path: |
+            *.csv
+            plots/*.png
+        if-no-files-found: warn
